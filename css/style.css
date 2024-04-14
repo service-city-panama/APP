@@ -20,6 +20,7 @@
     margin: 20px;
 }
 
+.color-dark-gray { color: #333;}
 .color-gray { color: #666 }
 .color-red { color: red }
 
@@ -32,6 +33,7 @@
 .fs-xxl { font-size: xx-large }
 .img { width: 100%;    border-radius: 5px; }
 .text-center { text-align: center; }
+.text-nodeco { text-decoration: none; }
 /*===== ===== ===== NavBar ===== ===== ===== */
 * { margin: 0;     padding: 0;     box-sizing: border-box;     font-family: poppins; }
 .nav-header { display: flex;     align-items: center;     justify-content: space-between;
@@ -85,12 +87,12 @@
 }
 
 .card-2 {
-    max-width: 600px;
+    max-width: fit-content;
     padding: 20px;
     border: 2px, solid #ccc;
     border-radius: 10px;
     margin: 20px;
-    margin-top: 10px;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     justify-content: center;
     align-items: center;
@@ -125,6 +127,10 @@
     background-color: #ddd;
 }
 
+a {
+    text-decoration: none;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -132,7 +138,6 @@ table {
 th, td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: center;
     color: #666;
 }
 th {
