@@ -23,6 +23,7 @@
 .color-dark-gray { color: #333;}
 .color-gray { color: #666 }
 .color-red { color: red }
+.color-white { color: #fff; }
 
 .display-center { display: grid;    place-items: center; }
 .display-flex-center { display: flex;    align-items: center;    justify-content: center; }
@@ -66,10 +67,10 @@
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     }
-
+    .nav button i { color: #fff; }
     .nav.visible { opacity: 1;     visibility: visible; }
     .nav-list { flex-direction: column;     align-items: end; }
-    .nav-list li a, i { text-decoration: none;     color: #fff;     font-weight: bold; }
+    .nav-list li a { text-decoration: none;     color: #fff;     font-weight: bold; }
     .nav-list a:hover i:hover { color: #ff9900; }
 }/*===== ===== ===== NavBar ===== ===== ===== */
 
@@ -77,7 +78,7 @@
 
 /*===== ===== ===== Card ===== ===== =====*/
 .card {
-    width: 360px;
+    width: 380px;
     padding: 20px;
     border: 2px, solid #ccc;
     border-radius: 10px;
