@@ -1,0 +1,19 @@
+04-29:
+v2.002: funciona paginacion. sololamente la primera y ultima pagina, hay que arreglarolo para que se pueda pasar todas las paginas.
+v2.003: se resolvio el problema anterior, ya se puede ver pagina por pagina.
+v2.004: se mejoro la interaccion de los botones de las paginas, se limitó solo a 3 paginas visibles.
+v2.005: se agrego un select para 25, 50 y 100 elementos.
+04-30:
+v2.006: se reorganizaron los enlaces y se crearon paginas de tablero informativo y tablero de panama
+
+
+
+
+
+
+
+
+
+
+
+una select para que el usuario pueda escoger cuantos elementos quiere ver
