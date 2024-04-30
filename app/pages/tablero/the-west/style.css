@@ -4,7 +4,7 @@
 
 * { margin: 0;     padding: 0;     box-sizing: border-box;     font-family: poppins; }
 body { background-color: #ececec;
-height: 100vh; }
+height: 100%; }
 
 .bg-white { background-color: #fff }
 
@@ -16,6 +16,7 @@ height: 100vh; }
 .color-gray { color: #666 }
 .color-red { color: red }
 .color-white { color: #fff; }
+.color-green-lime {color: lime; }
 
 .display-center { display: grid;    place-items: center; }
 .display-flex-center { display: flex;    align-items: center;    justify-content: center; }
@@ -23,6 +24,9 @@ height: 100vh; }
 .fs-xl { font-size: x-large }
 .fs-xxl { font-size: xx-large }
 .img { width: 100%;    border-radius: 5px; }
+.mg-05em {
+    margin: .5em;
+}
 .text-center { text-align: center; }
 .text-nodeco { text-decoration: none; }
 
@@ -281,4 +285,9 @@ cursor: pointer;
 .th-estado
 .th-unidad {
     width: 100px;
+}
+
+/* Footer*/
+footer {
+    margin: 0.5em;
 }

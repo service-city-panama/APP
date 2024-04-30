@@ -10,7 +10,7 @@ cerrar.addEventListener("click", () => { nav.classList.remove("visible"); });
 
 const form = document.querySelector("form");
 const tabla = document.getElementById("tableroChorrera");
-let itemsPerPage = 25; // Número de elementos por página
+let itemsPerPage = 10; // Número de elementos por página
 let totalPages;
 let currentPage = 1;
 let isSubmitting = false;

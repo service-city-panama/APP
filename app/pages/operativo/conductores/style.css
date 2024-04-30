@@ -20,6 +20,9 @@ body { background-color: #ececec; }
 .fs-xl { font-size: x-large }
 .fs-xxl { font-size: xx-large }
 .img { width: 100%;    border-radius: 5px; }
+.mg-05em {
+    margin: .5em;
+}
 .text-center { text-align: center; }
 .text-nodeco { text-decoration: none; }
 

@@ -1,14 +1,15 @@
 @import 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
 
-
 * { margin: 0;     padding: 0;     box-sizing: border-box;     font-family: poppins; }
 body { background-color: #ececec;
     min-height: 100vh;
  }
 
 .bg-white { background-color: #fff }
-
+.border {
+    border: 2px solid black;
+}
 .button { display: inline-block;    padding: .75em 1.5em;    background: #666;    color: #fff;
     border-radius: .5em;    border: none;    cursor: pointer;    text-decoration: none;    margin: 20px; }
 
@@ -17,20 +18,26 @@ body { background-color: #ececec;
 .color-gray { color: #666 }
 .color-red { color: red }
 .color-white { color: #fff; }
-
+.cursor-none {
+    cursor: none;
+}
 .display-center { display: grid;    place-items: center; }
 .display-flex-center { display: flex;    align-items: center;    justify-content: center; }
 
 .fs-xl { font-size: x-large }
 .fs-xxl { font-size: xx-large }
 .img { width: 100%;    border-radius: 5px; }
+.mg-05em {
+    margin: .5em;
+}
 .text-center { text-align: center; }
 .text-nodeco { text-decoration: none; }
 
 
 /*===== ===== ===== NavBar ===== ===== ===== */
-.nav-header { display: flex;     align-items: center;     justify-content: space-between;
-    padding: 1rem;     background-color: transparent;
+.nav-header { display: flex;
+    align-items: center;     justify-content: space-between;
+    background-color: transparent;
 }
 .nav-header button i { text-decoration: none;     color: #1c1c1c; }
 .nav-header i:hover { color: #ff9900; }
@@ -43,7 +50,12 @@ body { background-color: #ececec;
     margin: 1em;
 }
 .nav-list { list-style-type: none;     display: flex;     gap: 1rem; }
-.nav-list li a { text-decoration: none;     color: #1c1c1c; }
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: 500;
+}
 .nav-list a:hover { color: #ff9900; }
 .abrir-menu, .cerrar-menu { display: none; }
 
@@ -75,10 +87,13 @@ body { background-color: #ececec;
 /*===== ===== ===== NavBar ===== ===== ===== */
 
 /* Links */
+.links-container {
+margin-bottom: 0.5em;
+}
 .links a {
     font-size: 1.2em;
     font-weight: 500;
-    color: #333;
+    color: dodgerblue;
     margin: .5em;
     padding-bottom: .5em;
 }
@@ -87,8 +102,10 @@ body { background-color: #ececec;
     color: #ff9900;
     cursor: pointer;
 }
-
-
+.links .rules {
+font-size: 1.2em;
+font-weight: 500;
+}
 
 /* Sticky Form */
 .title {
@@ -105,8 +122,6 @@ body { background-color: #ececec;
     padding-bottom: 0.5em;
     width: 400px;
 }
-
-
 
 .title h1 {
     font-size: 1em;
@@ -177,6 +192,9 @@ ul li.pageNumber.active a {
     color: #fff;
 }
 
+
+
+
 /*===== ===== ===== Card ===== ===== =====*/
 .card {
     width: 380px;
@@ -238,6 +256,7 @@ ul li.pageNumber.active a {
 }
 
 .main-container {
+    margin-top: 1.2em;
     padding: 2rem 3rem;
     overflow: auto;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.3);
@@ -278,4 +297,9 @@ cursor: pointer;
 .th-estado
 .th-unidad {
     width: 100px;
+}
+
+/* Footer*/
+footer {
+    margin: 0.5em;
 }
