@@ -32,7 +32,7 @@
   <body>
     <!-- NavBar Header -->
     <header class="nav-header">
-      <h3 class="logo">Tablero Inactivo</h3>
+      <h3 class="logo">Fiscales & Checkeadores</h3>
       <button id="abrir" class="abrir-menu">
         <i class="bi bi-arrow-down-square fs-xxl" id="i"></i>
       </button>
@@ -41,41 +41,75 @@
           <i class="bi bi-arrow-up-square fs-xxl" id="i"></i>
         </button>
         <ul class="nav-list">
-          <li><a href="../../home/index.html">Inicio</a></li>
-          <li><a href="../../operativo/index.html">Personal</a></li>
+          <li><a href="../app/pages/home/index.html">Inicio</a></li>
+          <li><a href="../app/pages/operativo/index.html">Personal</a></li>
         </ul>
       </nav>
     </header>
 
+    <!-- Links -->
     <div class="links-container display-flex-center">
       <div class="links-content display-flex-center">
         <div class="links display-flex-center">
           <a href="../information/index.html">Info-Board</a>
-          <a href="../the-west/index.html">The West</a>
-      </div>
+          <a href="../the-city/index.html">The City</a>
+        </div>
       </div>
     </div>
 
     <!-- Sticky Form -->
     <section class="title display-center">
       <div class="title-container">
+        <!-- Up/Down Buttons -->
         <div class="title-content display-flex-center">
           <button
             id="scrollToTopBtn"
             class="bi bi-arrow-up-square btn-arrow"
           ></button>
-          <h1>The City Board</h1>
+          <h1>The West</h1>
           <button
             id="scrollToBottomBtn"
             class="bi bi-arrow-down-square btn-arrow"
           ></button>
         </div>
 
+        <!-- Form -->
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="display-flex-center">
+            <!-- Input #unidad-->
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              placeholder="#Unidad"
+              required
+            />
+
+            <!-- Input Select-->
+            <div class="select-input">
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Seleccionar...</option>
+                <option>.</option>
+                <option>Apoyo</option>
+                <option>Taller</option>
+              </select>
+              <div class="invalid-feedback">Selecciona una opciónn.</div>
+            </div>
+          </div>
+
+          <!-- Input Button -->
+          <div class="display-flex-center">
+            <button class="btn btn-submit" type="submit" id="submitForm-btn">
+              Anotar
+            </button>
+          </div>
+        </form>
+
         <!-- Pagination -->
         <div class="pagination display-flex-center">
           <ul class="display-flex-center">
             <li class="pageNumber prev-page">
-              <a href="#" id="prevPage">< </a>
+              <a href="#" id="prevPage"> < </a>
             </li>
             <li class="pageNumber next-page">
               <a href="#" id="nextPage"> ></a>
@@ -94,8 +128,6 @@
           </select>
         </div>
       </div>
-
-      <form class="row g-3 needs-validation" novalidate></form>
     </section>
 
     <!-- Imagen Box -->
@@ -121,61 +153,60 @@
               <th class="text-center">#</th>
               <th class="text-center">Unidad</th>
               <th class="text-center">Estado</th>
+              <th>Cambiar Estado</th>
+              <th>Eliminar</th>
             </tr>
           </thead>
 
           <!-- Table Body -->
-          <tbody id="tableroChorrera">
+          <tbody class="table-body" id="tableroChorrera">
             <tr>
-              <td>${filaNumero++}</td>
-              <td>${childData.unidad}</td>
-              <td>${childData.estado}</td>
+              <td>0</td>
+              <td>Lao</td>
+              <td>Coding</td>
+              <td>- - -</td>
+              <td>
+                <button
+                  type="button"
+                  class="button delete-btn"
+                  data-id="${childData.id}"
+                >
+                  <i class="bi bi-journal-x"></i>
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </main>
 
-    <!-- Modal HTML -->
-    <div
-      class="modal fade"
-      id="confirmDeleteModal"
-      tabindex="-1"
-      aria-labelledby="confirmDeleteModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="confirmDeleteModalLabel">
-              Confirmar Eliminación
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            ¿Estás seguro de que deseas eliminar este elemento?
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cancelar
-            </button>
-            <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
-              Eliminar
-            </button>
-          </div>
-        </div>
+    <!-- Delete Board Button / Solo activar para los admin -->
+    <!-- <div class="delete-board display-flex-center">
+      <label>Borrar tablero</label>
+      <a href="#" class="fs-xxl mg-05em color-red">
+        <i class="bi bi-journal-x" id="delete-board-button"></i>
+      </a>
+    </div> -->
+
+    <!-- Modal de confirmación -->
+    <div class="modal card" id="confirmation-modal">
+      <h1 class="modal-header modal-title">Modal de Confirmación</h1>
+      <label class="modal-content">¿Estás seguro que deseas borrar todo el tablero?</label>
+
+      <div class="footer display-flex-center bg-white">
+        <button class="button" id="confirm-delete" data-bs-dismiss="modal">Sí, Borrar</button>
+        <button class="button" id="cancel-delete">Cancelar</button>
       </div>
     </div>
 
     <script type="module" src="script.js"></script>
   </body>
+
+  <footer class="display-center">
+    <p>Nota: los botones de eliminar filas aun no estan activos</p>
+    <p>©2024 Cloud Service with Lao
+    <a href="http://wa.me/50768430240" class="color-green-lime fs-xxl mg-05em">
+      <i class="bi bi-whatsapp"></i>
+    </a></p>
+  </footer>
 </html>
